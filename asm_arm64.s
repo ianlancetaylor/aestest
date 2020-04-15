@@ -12,7 +12,7 @@
 TEXT runtime·aeshash(SB),NOSPLIT|NOFRAME,$0-32
 	MOVD	p+0(FP), R0
 	MOVD	s+16(FP), R1
-	MOVWU	h+8(FP), R3
+	MOVD	h+8(FP), R3
 	MOVD	$ret+24(FP), R2
 	B	aeshashbody<>(SB)
 

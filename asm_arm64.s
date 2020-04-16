@@ -2,14 +2,11 @@
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
-#include "go_asm.h"
-#include "go_tls.h"
-#include "tls_arm64.h"
 #include "funcdata.h"
 #include "textflag.h"
 
 // func aeshash(p unsafe.Pointer, h, size uintptr) uintptr
-TEXT runtime·aeshash(SB),NOSPLIT|NOFRAME,$0-32
+TEXT ·aeshash(SB),NOSPLIT|NOFRAME,$0-32
 	MOVD	p+0(FP), R0
 	MOVD	s+16(FP), R1
 	MOVD	h+8(FP), R3
